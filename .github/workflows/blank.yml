@@ -39,3 +39,8 @@ jobs:
         run: java -version
       - name: maven version
         run: mvn --version
+      - name: working
+        run: |
+          echo $sample_secret
+          env: 
+            sample_secret: ${{ secret.GIT_SECRET_KEYS }}
